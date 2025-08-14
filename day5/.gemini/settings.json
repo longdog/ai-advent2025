@@ -1,0 +1,17 @@
+{
+  "theme": "ANSI",
+  "selectedAuthType": "oauth-personal",
+  "mcpServers": {
+    "context7": {
+      "httpUrl": "https://mcp.context7.com/mcp"
+    },
+    "github": {
+      "httpUrl": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer <TOKEN>"
+      },
+      "timeout": 5000,
+      "trust": true
+    }
+  }
+}
