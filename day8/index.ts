@@ -14,10 +14,9 @@ const { BOT_TOKEN } = process.env;
 
 const initStdioClient = async () => {
   const stdioClient = new Client({
-    name: "logseq",
+    name: "mcp-gsheet",
     version: "1",
   });
-  const { LOGSEQ_API_TOKEN, LOGSEQ_API_URL } = process.env;
   const transport = new StdioClientTransport({
     command: "python3",
     args: ["./mcp-gsheet/server.py"],
