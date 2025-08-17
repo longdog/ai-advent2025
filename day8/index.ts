@@ -21,7 +21,7 @@ const initStdioClient = async () => {
   const transport = new StdioClientTransport({
     command: "python3",
     args: ["./mcp-gsheet/server.py"],
-    env: { GOOGLE_APPLICATION_CREDENTIALS: "/home/denis/gcp-oauth.json" },
+    env: { GOOGLE_APPLICATION_CREDENTIALS: "/usr/src/app/gcp-oauth.json" },
   });
   await stdioClient.connect(transport);
   return stdioClient;

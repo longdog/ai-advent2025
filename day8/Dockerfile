@@ -38,6 +38,7 @@ RUN chmod +x start.sh
 
 # Set environment variables from .env file
 COPY .env .
+COPY gcp-oauth.json .
 # RUN export $(cat .env | xargs)
 
 CMD ["./start.sh"]
