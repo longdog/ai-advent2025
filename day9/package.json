@@ -1,0 +1,25 @@
+{
+  "name": "day4",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.70",
+    "@langchain/groq": "^0.2.3",
+    "@langchain/langgraph": "^0.4.5",
+    "@langchain/langgraph-supervisor": "^0.0.18",
+    "@langchain/mcp-adapters": "^0.6.0",
+    "@modelcontextprotocol/sdk": "^1.17.3",
+    "@types/marked-terminal": "^6.1.1",
+    "langchain": "^0.3.30",
+    "langchain-gigachat": "^0.0.14",
+    "marked": "^16.1.2",
+    "marked-terminal": "^7.3.0"
+  }
+}
