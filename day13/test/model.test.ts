@@ -1,0 +1,29 @@
+import { test, expect } from 'bun:test';
+import { minorSuit, minorRank, makeMinorArcanaDeck, makeDealer } from './model';
+
+test('minorSuit is an array', () => {
+ expect(minorSuit).toBeInstanceOf(Array);
+});
+
+test('minorRank is an array', () => {
+ expect(minorRank).toBeInstanceOf(Array);
+});
+
+test('makeMinorArcanaDeck returns an array of MinorArkanaCard', () => {
+ const deck = makeMinorArcanaDeck();
+ expect(deck).toBeInstanceOf(Array);
+ expect(deck[0].type).toBe('MinorArkana');
+});
+
+test('makeDealer returns a function that yields CardInGame', async () => {
+ const getOrientation = async () => 'Upright';
+ const getRandomCardNum = async (len: number) => 0;
+ const dealer = makeDealer(getOrientation, getRandomCardNum);
+ const deck = makeMinorArcanaDeck();
+ const cardsNum = 1;
+ const generator = dealer(deck, cardsNum);
+ for await (const card of generator) {
+ expect(card).toHaveProperty('card');
+ expect(card).toHaveProperty('orientation');
+ }
+});
